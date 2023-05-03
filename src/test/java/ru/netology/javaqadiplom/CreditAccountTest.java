@@ -180,7 +180,7 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void ifAmountIsMoreThanCredilLimitPlusBalance() {
+    public void ifAmountIsMoreThanCreditLimitPlusBalance() {
         CreditAccount account = new CreditAccount(
                 1_000,
                 5_000,

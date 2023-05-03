@@ -68,7 +68,7 @@ public class SavingAccountTest {
     public void initialBalanceEqualZero() {
         SavingAccount account = new SavingAccount(
                 0,
-                1_000,
+                0,
                 10_000,
                 5
         );
@@ -80,7 +80,7 @@ public class SavingAccountTest {
     @Test
     public void minBalanceEqualZero() {
         SavingAccount account = new SavingAccount(
-                2_000,
+                0,
                 0,
                 10_000,
                 5
@@ -223,7 +223,7 @@ public class SavingAccountTest {
         SavingAccount account = new SavingAccount(2_000, 500, 10_000, 5);
         boolean result = account.pay(100);
 
-        Assertions.assertEquals(2_000, account.getBalance());
+        Assertions.assertEquals(1_900, account.getBalance());
     }
 
     @Test
@@ -244,7 +244,7 @@ public class SavingAccountTest {
         boolean result = account.pay(1_000);
 
         Assertions.assertEquals(1_000, account.getBalance());
-        Assertions.assertEquals(false, result);
+        Assertions.assertEquals(true, result);
     }
 
     @Test
@@ -260,5 +260,6 @@ public class SavingAccountTest {
 
         Assertions.assertEquals(100, result);
     }
+
 
 }

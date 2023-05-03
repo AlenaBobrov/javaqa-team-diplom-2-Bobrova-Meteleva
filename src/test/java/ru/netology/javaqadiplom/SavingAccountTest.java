@@ -92,7 +92,7 @@ public class SavingAccountTest {
     @Test
     public void maxBalanceEqualZero() {
         SavingAccount account = new SavingAccount(
-                2_000,
+                0,
                 0,
                 0,
                 5
